@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'models/server.dart';
 import 'package:server_app/widgets/server_item.dart';
 
 void main() {
@@ -17,15 +18,19 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)
             .copyWith(secondary: Colors.amber),
       ),
-      home: const MyHomePage(title: 'Server App'),
+      home: MyHomePage(title: 'Server App'),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
   final String title;
+  final List<Server> servers = [
+    Server(id: '1', name: 'Server1', url: 'some.url.com'),
+    Server(id: '2', name: 'Server2', url: 'some.url.com')
+  ];
 
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   void showServerDetails() {}
 

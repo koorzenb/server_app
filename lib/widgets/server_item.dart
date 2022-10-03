@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../models/server.dart';
+
 class ServerItem extends StatelessWidget {
   final Function showServerDetails;
 
@@ -18,6 +20,7 @@ class ServerItem extends StatelessWidget {
           trailing: IconButton(
             onPressed: () => showServerDetails(),
             icon: const Icon(Icons.chevron_right),
+            color: Colors.black54,
           )),
     );
   }
