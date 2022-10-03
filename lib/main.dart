@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'models/server.dart';
+
+import './models/server.dart';
+import './screens/server_settings_screen.dart';
 import './widgets/server_item.dart';
 
 void main() {
@@ -18,7 +20,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)
             .copyWith(secondary: Colors.amber),
       ),
-      home: MyHomePage(title: 'Server App'),
+      // home: MyHomePage(title: 'Server App'),
+      home: ServerSettingsScreen(),
     );
   }
 }
@@ -39,6 +42,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text(title),
+          //TODO: add events button
         ),
         body: Column(
           children: [
