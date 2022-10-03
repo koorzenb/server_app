@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'models/server.dart';
-import 'package:server_app/widgets/server_item.dart';
+import './widgets/server_item.dart';
 
 void main() {
   runApp(const MyApp());
