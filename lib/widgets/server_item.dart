@@ -37,7 +37,7 @@ class ServerItem extends StatelessWidget {
             children: [
               const Icon(Icons.power_settings_new),
               IconButton(
-                onPressed: () => showServerDetails(),
+                onPressed: () => print('right chevron'),
                 icon: const Icon(Icons.chevron_right),
                 color: Colors.black54,
               ),

@@ -40,11 +40,27 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text(title),
         ),
-        body: ListView.builder(
-          itemBuilder: (context, index) {
-            return ServerItem(showServerDetails);
-          },
-          itemCount: 2,
+        body: Column(
+          children: [
+            Container(
+              height: 200,
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return ServerItem(showServerDetails);
+                },
+                itemCount: 2,
+              ),
+            ),
+            Center(
+              child: TextButton(
+                  onPressed: () => print('text button'),
+                  child: Text(
+                    'add server',
+                    style:
+                        TextStyle(color: Theme.of(context).colorScheme.primary),
+                  )),
+            )
+          ],
         ));
   }
 }
