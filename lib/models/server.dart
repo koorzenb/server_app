@@ -9,12 +9,16 @@ class Server {
   String channel; //String?
   Icon icon;
 
+  // String get serverName() {
+  //   return name;
+  // }
+
   Server({
     required this.id,
     required this.name,
     this.subtitle = 'some subtitle',
     required this.url,
-    this.pollTime = 1000,
+    this.pollTime = 30,
     this.channel = 'some channel',
     this.icon = const Icon(Icons.abc),
   });

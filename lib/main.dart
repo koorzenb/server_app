@@ -19,6 +19,23 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)
             .copyWith(secondary: Colors.amber),
+        textTheme: ThemeData.light().textTheme.copyWith(
+            bodyText1: const TextStyle(
+              color: Color.fromRGBO(20, 51, 51, 1),
+              fontWeight: FontWeight.normal,
+              fontSize: 20,
+            ),
+            bodyText2: const TextStyle(
+              color: Color.fromRGBO(20, 51, 51, 1),
+            ),
+            headline5: const TextStyle(
+              color: Colors.purple,
+              fontWeight: FontWeight.normal,
+              fontSize: 12,
+            ),
+            headline6: const TextStyle(
+              fontWeight: FontWeight.bold,
+            )),
       ),
       // home: MyHomePage(title: 'Server App'),
       home: ServerSettingsScreen(),
@@ -28,9 +45,19 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
   final String title;
-  final List<Server> servers = [
-    Server(id: '1', name: 'Server1', url: 'some.url.com'),
-    Server(id: '2', name: 'Server2', url: 'some.url.com')
+  List<Server> dummyData = [
+    Server(
+        id: "1",
+        name: "Server1",
+        url: "some.url.com",
+        subtitle: "some subtitle"),
+    Server(
+        id: "2",
+        name: "Server2",
+        url: "another.url.com",
+        pollTime: 1200,
+        channel: "another channel",
+        icon: const Icon(Icons.place_rounded)),
   ];
 
   MyHomePage({Key? key, required this.title}) : super(key: key);
